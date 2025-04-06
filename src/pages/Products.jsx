@@ -3,6 +3,7 @@ import axios from "axios";
 
 const Products = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getData = () => {
     axios
