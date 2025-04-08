@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Spinner from "../components/Spinner";
 
 const Products = () => {
   const [data, setData] = useState([]);
@@ -27,7 +28,7 @@ const Products = () => {
   return (
     <>
       {loading ? (
-        <h1>Loading...</h1>
+        <Spinner />
       ) : (
         <>
           {data.map((item) => (
