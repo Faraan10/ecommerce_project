@@ -7,12 +7,11 @@ const Spinner = () => {
       style={{
         display: "flex",
         justifyContent: "center",
-        height: "80vh",
+        height: "90vh",
         alignItems: "center",
-        fontSize: "40px",
       }}
     >
-      <span className="loading loading-ring loading-xl"></span>
+      <span className="loading loading-spinner loading-xl"></span>
     </div>
   );
 };
