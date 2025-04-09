@@ -9,6 +9,8 @@ import {
   Cart,
   Contact,
   About,
+  Profile,
+  Settings,
 } from "./pages/index";
 import MainLayout from "./layouts/Mainlayout";
 import Authlayout from "./layouts/AuthLayout";
@@ -34,6 +36,8 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route element={<PrivateRoute />}>
               <Route path="/dashboard" element={<DashBoard />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/settings" element={<Settings />} />
             </Route>
           </Route>
 

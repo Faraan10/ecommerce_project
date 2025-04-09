@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AvatarDropdown = ({ handleLogout }) => {
   const [open, setOpen] = useState(false);
@@ -7,7 +8,7 @@ const AvatarDropdown = ({ handleLogout }) => {
 
   const toggleDropdown = () => setOpen(!open);
 
-  // Close on click outside
+  // Close on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
@@ -29,19 +30,46 @@ const AvatarDropdown = ({ handleLogout }) => {
           alt="avatar"
           className="w-8 h-8 rounded-full"
         />
-        <ChevronDown size={18} className="transition-transform duration-200" />
+        <ChevronDown
+          size={18}
+          className={`transition-transform duration-200 ${
+            open ? "rotate-180" : ""
+          }`}
+        />
       </div>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-40 bg-white text-black rounded-md shadow-lg p-2 z-50">
-          <p className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Profile</p>
-          <p className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Settings</p>
-          <p
-            className="px-4 py-2 hover:bg-gray-200 cursor-pointer"
-            onClick={handleLogout}
+        <div className="absolute right-0 mt-2 w-44 py-3 bg-white text-black rounded-md shadow-lg z-50 overflow-hidden">
+          <Link
+            to="/profile"
+            className="block px-4 py-2 hover:bg-gray-100 text-md"
+            onClick={() => setOpen(false)}
+          >
+            Profile
+          </Link>
+          <Link
+            to="/about"
+            className="block px-4 py-2 hover:bg-gray-100 text-md"
+            onClick={() => setOpen(false)}
+          >
+            About
+          </Link>
+          <Link
+            to="/settings"
+            className="block px-4 py-2 hover:bg-gray-100 text-md"
+            onClick={() => setOpen(false)}
+          >
+            Settings
+          </Link>
+          <button
+            onClick={() => {
+              setOpen(false);
+              handleLogout();
+            }}
+            className="w-full text-left px-4 py-2 hover:bg-gray-100 text-md cursor-pointer"
           >
             Logout
-          </p>
+          </button>
         </div>
       )}
     </div>

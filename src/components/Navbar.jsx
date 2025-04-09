@@ -62,7 +62,6 @@ const Navbar = () => {
               </div>
             </Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/about">About</Link>
             {token ? (
               <>
                 <AvatarDropdown handleLogout={handleLogout} />
@@ -173,7 +172,7 @@ const Navbar = () => {
                     </div>
                   </>
                 ) : (
-                  <div onClick={(e) => e.stopPropagation()}>
+                  <div>
                     <AvatarDropdown handleLogout={handleLogout} />
                   </div>
                 )}
