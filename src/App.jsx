@@ -6,6 +6,7 @@ import {
   Login,
   Products,
   SingleProduct,
+  Cart,
   Contact,
   About,
 } from "./pages/index";
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/products/:id" element={<SingleProduct />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route element={<PrivateRoute />}>

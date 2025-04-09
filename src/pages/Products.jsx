@@ -20,33 +20,29 @@ const Products = () => {
         setLoading(false);
       });
   };
+
   useEffect(() => {
     getData();
   }, []);
-
-  console.log(data);
 
   return (
     <>
       {loading ? (
         <Spinner />
       ) : (
-        <>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20">
-              {data.map((item) => (
-                <div key={item.id}>
-                  <ProductCard
-                    title={item.title}
-                    desc={item.description}
-                    price={item.price}
-                    image={item.images[0]}
-                  />
-                </div>
-              ))}
-            </div>
+        <div className="w-full px-4 py-8 flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl w-full justify-items-center">
+            {data.map((item) => (
+              <ProductCard
+                key={item.id}
+                title={item.title}
+                desc={item.description}
+                price={item.price}
+                image={item.images[0]}
+              />
+            ))}
           </div>
-        </>
+        </div>
       )}
     </>
   );
