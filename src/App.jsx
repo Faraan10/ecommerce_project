@@ -14,24 +14,36 @@ import {
 } from "./pages/index";
 import MainLayout from "./layouts/Mainlayout";
 import Authlayout from "./layouts/AuthLayout";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import PrivateRoute from "./routes/PrivateRoute";
 
 const App = () => {
+  const [cart, setCart] = useState([]);
   const random = crypto.randomUUID();
+
+  const [token, setToken] = useState("");
 
   useEffect(() => {
     localStorage.setItem("token", random);
+    setToken(localStorage.getItem("token"));
   }, []);
+  // console.log(token);
+
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<MainLayout />}>
+          <Route element={<MainLayout cart={cart} />}>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/products/:id" element={<SingleProduct />} />
-            <Route path="/cart" element={<Cart />} />
+            <Route path="/products" element={<Products setCart={setCart} />} />
+            <Route
+              path="/products/:id"
+              element={<SingleProduct setCart={setCart} />}
+            />
+            <Route
+              path="/cart"
+              element={<Cart cart={cart} setCart={setCart} />}
+            />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route element={<PrivateRoute />}>

@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AvatarDropdown from "./AvatarDropdown";
 import { ShoppingCart } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ cart }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [token, setToken] = useState(null);
   const navigate = useNavigate();
@@ -57,7 +57,7 @@ const Navbar = () => {
                   className="text-gray-800 dark:text-white"
                 />
                 <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs px-1.5 py-0.5 rounded-full">
-                  3
+                  {cart.length}
                 </span>
               </div>
             </Link>
