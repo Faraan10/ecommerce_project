@@ -23,6 +23,31 @@ const App = () => {
 
   const [token, setToken] = useState("");
 
+  const addToCart = (product) => {
+    console.log(product);
+
+    const checkCart = cart.find((item) => item.id === product.id);
+
+    if (checkCart) {
+      if (checkCart.quantity < product.stock) {
+        const updatedCart = cart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+        setCart(updatedCart);
+      } else {
+        alert("Max stock reached");
+      }
+    } else {
+      if (product.stock > 0) {
+        setCart([...cart, { ...product, quantity: 1 }]);
+      } else {
+        alert("Out of stock");
+      }
+    }
+  };
+
   useEffect(() => {
     localStorage.setItem("token", random);
     setToken(localStorage.getItem("token"));
@@ -35,7 +60,17 @@ const App = () => {
         <Routes>
           <Route element={<MainLayout cart={cart} />}>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products setCart={setCart} />} />
+            <Route
+              path="/products"
+              element={
+                <Products
+                  token={token}
+                  cart={cart}
+                  setCart={setCart}
+                  addToCart={addToCart}
+                />
+              }
+            />
             <Route
               path="/products/:id"
               element={<SingleProduct setCart={setCart} />}

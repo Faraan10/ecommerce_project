@@ -3,7 +3,7 @@ import axios from "axios";
 import Spinner from "../components/Spinner";
 import ProductCard from "../components/ProductCard";
 
-const Products = () => {
+const Products = ({ token, cart, setCart, addToCart }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -12,7 +12,11 @@ const Products = () => {
     axios
       .get("https://dummyjson.com/products")
       .then((response) => {
-        setData(response.data.products);
+        const productsWithQuantity = response.data.products.map((product) => ({
+          ...product,
+          quantity: 1,
+        }));
+        setData(productsWithQuantity);
         setLoading(false);
       })
       .catch((err) => {
@@ -25,6 +29,8 @@ const Products = () => {
     getData();
   }, []);
 
+  console.log(data);
+
   return (
     <>
       {loading ? (
@@ -35,10 +41,15 @@ const Products = () => {
             {data.map((item) => (
               <ProductCard
                 key={item.id}
+                item={item} // this is the entire object to pass to cart
                 title={item.title}
                 desc={item.description}
                 price={item.price}
                 image={item.images[0]}
+                quantity={item.quantity}
+                stock={item.stock}
+                token={token}
+                addToCart={addToCart}
               />
             ))}
           </div>
