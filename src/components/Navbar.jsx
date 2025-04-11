@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import AvatarDropdown from "./AvatarDropdown";
 import { ShoppingCart } from "lucide-react";
+import toast from "react-hot-toast";
 
 const Navbar = ({ cart }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +23,7 @@ const Navbar = ({ cart }) => {
     setIsOpen(false);
     setToken(null);
     navigate("/login");
+    toast.error("user logged out");
   };
 
   useEffect(() => {

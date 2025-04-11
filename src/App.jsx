@@ -16,6 +16,7 @@ import MainLayout from "./layouts/Mainlayout";
 import Authlayout from "./layouts/AuthLayout";
 import { useEffect, useState } from "react";
 import PrivateRoute from "./routes/PrivateRoute";
+import toast from "react-hot-toast";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -36,14 +37,15 @@ const App = () => {
             : item
         );
         setCart(updatedCart);
+        toast.success("Added to cart");
       } else {
-        alert("Max stock reached");
+        toast.error("Max stock reached");
       }
     } else {
       if (product.stock > 0) {
         setCart([...cart, { ...product, quantity: 1 }]);
       } else {
-        alert("Out of stock");
+        toast.error("Out of stock");
       }
     }
   };
