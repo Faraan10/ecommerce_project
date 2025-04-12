@@ -9,14 +9,18 @@ const Cart = ({ cart, setCart }) => {
         {cart.length != 0 ? (
           cart.map((item) => (
             <div key={item.id}>
-              <div className="">
-                <img
-                  src={item.images[0]}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+              <div className="cart-items">
+                <div className="cart-image">
+                  <img
+                    src={item.images[0]}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="cart-description">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
               </div>
             </div>
           ))
