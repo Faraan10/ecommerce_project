@@ -47,8 +47,6 @@ const Navbar = ({ cart }) => {
           <Link to="/" className="text-xl font-bold cursor-pointer">
             App Name
           </Link>
-
-          {/* desktop view */}
           <div className="hidden md:flex gap-6 items-center">
             <Link to="/">Home</Link>
             <Link to="/products">Products</Link>
