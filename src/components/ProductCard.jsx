@@ -21,7 +21,7 @@ const ProductCard = ({
       </figure>
       <div className="card-body">
         <h2 className="card-title text-white">{title}</h2>
-        <p className="text-gray-300">{desc}</p>
+        <p className="text-gray-300 line-clamp-3">{desc}</p>
         {stock <= 5 ? (
           <div
             className="badge badge-soft badge-error mt-3 mb-3"
