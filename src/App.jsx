@@ -44,6 +44,7 @@ const App = () => {
     } else {
       if (product.stock > 0) {
         setCart([...cart, { ...product, quantity: 1 }]);
+        toast.success("Added to cart");
       } else {
         toast.error("Out of stock");
       }
