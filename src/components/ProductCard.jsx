@@ -15,13 +15,13 @@ const ProductCard = ({
   // const [wishList, setWishList] = useState(false);
 
   return (
-    <div className="card bg-[#2a2a2a] w-80 shadow-md hover:shadow-lg transition duration-300 rounded-lg">
+    <div className="card bg-base-300 w-80 shadow-md hover:shadow-lg transition duration-300 rounded-lg">
       <figure className="h-48 overflow-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title text-white">{title}</h2>
-        <p className="text-gray-300 line-clamp-3">{desc}</p>
+        <h2 className="card-title text-base-content">{title}</h2>
+        <p className="text-base-content line-clamp-3">{desc}</p>
         {stock <= 5 ? (
           <div
             className="badge badge-soft badge-error mt-3 mb-3"
