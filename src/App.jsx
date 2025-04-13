@@ -52,6 +52,10 @@ const App = () => {
     }
   };
 
+  const [isDarkMode, setIsDarkMode] = useState(
+    localStorage.getItem("theme") === "dark"
+  );
+
   useEffect(() => {
     localStorage.setItem("token", random);
     setToken(localStorage.getItem("token"));
@@ -62,7 +66,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route element={<MainLayout cart={cart} />}>
+          <Route element={<MainLayout cart={cart} isDarkMode={isDarkMode} />}>
             <Route path="/" element={<Home />} />
             <Route
               path="/products"
@@ -88,7 +92,15 @@ const App = () => {
             <Route element={<PrivateRoute />}>
               <Route path="/dashboard" element={<DashBoard />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/settings" element={<Settings />} />
+              <Route
+                path="/settings"
+                element={
+                  <Settings
+                    isDarkMode={isDarkMode}
+                    setIsDarkMode={setIsDarkMode}
+                  />
+                }
+              />
             </Route>
           </Route>
 

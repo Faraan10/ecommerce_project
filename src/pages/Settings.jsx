@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Settings = () => {
-  const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
-  );
-
+const Settings = ({ isDarkMode, setIsDarkMode }) => {
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";
     document.documentElement.setAttribute("data-theme", savedTheme);
