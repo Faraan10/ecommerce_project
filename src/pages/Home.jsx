@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="bg-[#1a1a1a] text-white min-h-screen">
+      <div className="bg-base-100 text-white min-h-screen">
         {/* Hero Section */}
         <div className="hero min-h-[80vh] bg-base-200 bg-opacity-10">
           <div className="hero-content flex-col lg:flex-row-reverse">
@@ -26,8 +26,10 @@ const Home = () => {
               alt="Sneakers"
             />
             <div>
-              <h1 className="text-5xl font-bold">Step into Style</h1>
-              <p className="py-6 text-gray-300">
+              <h1 className="text-5xl font-bold text-base-content">
+                Step into Style
+              </h1>
+              <p className="py-6 text-base-content">
                 Discover the best in footwear. Designed for comfort, built for
                 confidence.
               </p>
@@ -43,18 +45,18 @@ const Home = () => {
           <h2 className="text-2xl font-bold mb-6">Featured Collections</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {/* Dummy Cards */}
-            <div className="card bg-neutral shadow-lg">
-              <figure className="w-full h-72 overflow-hidden flex items-center justify-center bg-white">
+            <div className="card bg-base-100 shadow-lg">
+              <figure className="w-full h-72 overflow-hidden flex items-center justify-center bg-base-100">
                 <img
                   src="https://www.si.com/.image/c_fill,w_1200,ar_4:3,f_auto,q_auto,g_auto/MjAxOTI5OTExNjkzMjg4OTY3/nike-sneakers.jpg"
                   alt="shoe"
-                  className="h-full object-contain p-2"
+                  className="h-full object-contain p-2 "
                 />
               </figure>
 
               <div className="card-body">
-                <h2 className="card-title">Sneaker Model</h2>
-                <p className="text-sm text-gray-300">
+                <h2 className="card-title text-base-content">Sneaker Model</h2>
+                <p className="text-sm text-base-content">
                   Premium build, modern design.
                 </p>
                 <div className="card-actions justify-end">
@@ -62,8 +64,8 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="card bg-neutral shadow-lg">
-              <figure className="w-full h-72 overflow-hidden flex items-center justify-center bg-white">
+            <div className="card bg-base-100 shadow-lg">
+              <figure className="w-full h-72 overflow-hidden flex items-center justify-center bg-base-100">
                 <img
                   src="https://assets.adidas.com/images/w_1880,f_auto,q_auto/b571b57606e94127bf77663c1fb009a9_9366/ID8468_HM1.jpg"
                   alt="shoe"
@@ -71,8 +73,8 @@ const Home = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Sneaker Model</h2>
-                <p className="text-sm text-gray-300">
+                <h2 className="card-title text-base-content">Sneaker Model</h2>
+                <p className="text-sm text-base-content">
                   Premium build, modern design.
                 </p>
                 <div className="card-actions justify-end">
@@ -80,8 +82,8 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="card bg-neutral shadow-lg">
-              <figure className="w-full h-72 overflow-hidden flex items-center justify-center bg-white">
+            <div className="card bg-base-100 shadow-lg">
+              <figure className="w-full h-72 overflow-hidden flex items-center justify-center bg-base-100">
                 <img
                   src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_363,c_limit/0c8255fa-2f08-4d21-acb0-4e8d9e33ba67/the-best-shoes-for-standing-all-day.jpg"
                   alt="shoe"
@@ -89,8 +91,8 @@ const Home = () => {
                 />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">Sneaker Model</h2>
-                <p className="text-sm text-gray-300">
+                <h2 className="card-title text-base-content">Sneaker Model</h2>
+                <p className="text-sm text-base-content">
                   Premium build, modern design.
                 </p>
                 <div className="card-actions justify-end">

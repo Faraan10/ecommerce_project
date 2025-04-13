@@ -29,9 +29,6 @@ const Navbar = ({ cart }) => {
     return () => document.removeEventListener("keydown", handleEsc);
   }, []);
 
-  const navLinkClass =
-    "hover:bg-base-200 hover:text-base-content px-3 py-1 rounded transition";
-
   return (
     <nav className="bg-base-300 text-base-content p-6 shadow-md">
       <div className="max-w-7xl mx-auto flex justify-between items-center">

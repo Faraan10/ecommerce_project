@@ -3,7 +3,7 @@ import axios from "axios";
 import Spinner from "../components/Spinner";
 import ProductCard from "../components/ProductCard";
 
-const Products = ({ token, cart, setCart, addToCart }) => {
+const Products = ({ token, addToCart }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 

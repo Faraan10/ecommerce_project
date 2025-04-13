@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Heart } from "lucide-react";
-import toast from "react-hot-toast";
 
 const ProductCard = ({
   item,

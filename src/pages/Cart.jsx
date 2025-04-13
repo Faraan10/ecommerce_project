@@ -76,7 +76,7 @@ const Cart = ({ cart, setCart }) => {
             </div>
           ))
         ) : (
-          <div className="text-center text-base-300 text-xl">
+          <div className="text-center text-base-content text-xl">
             🛒 Your cart is empty
           </div>
         )}
