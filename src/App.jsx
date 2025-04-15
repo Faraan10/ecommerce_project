@@ -52,15 +52,21 @@ const App = () => {
     }
   };
 
-  const [isDarkMode, setIsDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
-  );
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem("theme") === "dark";
+  });
 
   useEffect(() => {
     localStorage.setItem("token", random);
     setToken(localStorage.getItem("token"));
   }, []);
   // console.log(token);
+
+  useEffect(() => {
+    const theme = isDarkMode ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [isDarkMode]);
 
   return (
     <>
