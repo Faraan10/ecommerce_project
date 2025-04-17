@@ -11,11 +11,13 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-base-100 text-base-content py-10 px-5 md:px-20">
+    <div className="min-h-screen bg-base-100 text-base-content py-20 px-5 md:px-20">
       <div className="max-w-md mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-center">Login</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center">
+          Welcome to Zayrah
+        </h2>
         <p className="text-base-content mb-10 text-center">
-          Welcome back! Please log in to your account.
+          Please log in to your account.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
