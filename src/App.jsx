@@ -11,6 +11,7 @@ import {
   About,
   Profile,
   Settings,
+  NotFound,
 } from "./pages/index";
 import MainLayout from "./layouts/Mainlayout";
 import Authlayout from "./layouts/AuthLayout";
@@ -95,6 +96,7 @@ const App = () => {
             />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="*" element={<NotFound />} />
             <Route element={<PrivateRoute />}>
               <Route path="/dashboard" element={<DashBoard />} />
               <Route path="/profile" element={<Profile />} />
