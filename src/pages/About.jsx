@@ -16,8 +16,8 @@ const About = () => {
             </h3>
             <p className="text-base-content leading-relaxed">
               Welcome to{" "}
-              <span className="text-primary font-bold">TheMultiHub</span>, your
-              one-stop destination for premium footwear and fashion essentials.
+              <span className="text-primary font-bold">Zayrah.life</span>, your
+              one-stop destination for premium clothing and fashion essentials.
               We're a passionate team of designers, developers, and product
               curators dedicated to delivering quality and style at your
               doorstep.
