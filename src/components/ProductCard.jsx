@@ -21,28 +21,33 @@ const ProductCard = ({
       <div className="card-body">
         <h2 className="card-title text-base-content">{title}</h2>
         <p className="text-base-content line-clamp-3">{desc}</p>
-        {stock <= 5 ? (
-          <div
-            className="badge badge-soft badge-error mt-3 mb-3"
-            style={{ fontWeight: "bold", fontSize: "12px" }}
-          >
-            ONLY {stock} LEFT
+        <div className="card-actions justify-between">
+          <div>
+            {stock <= 5 ? (
+              <div
+                className="badge badge-soft badge-error mt-3 mb-3"
+                style={{ fontWeight: "bold", fontSize: "12px" }}
+              >
+                ONLY {stock} LEFT
+              </div>
+            ) : stock <= 20 ? (
+              <div
+                className="badge badge-soft badge-warning mt-3 mb-3"
+                style={{ fontWeight: "bold", fontSize: "12px" }}
+              >
+                FEW LEFT
+              </div>
+            ) : (
+              <div
+                className="badge badge-soft badge-accent mt-3 mb-3"
+                style={{ fontWeight: "bold", fontSize: "12px" }}
+              >
+                IN STOCK
+              </div>
+            )}
           </div>
-        ) : stock <= 20 ? (
-          <div
-            className="badge badge-soft badge-warning mt-3 mb-3"
-            style={{ fontWeight: "bold", fontSize: "12px" }}
-          >
-            FEW LEFT
-          </div>
-        ) : (
-          <div
-            className="badge badge-soft badge-accent mt-3 mb-3"
-            style={{ fontWeight: "bold", fontSize: "12px" }}
-          >
-            IN STOCK
-          </div>
-        )}
+          <p className="text-base-content mt-3 mb-3">$ {price}</p>
+        </div>
 
         <div className="card-actions justify-between">
           <button className="btn btn-primary" onClick={() => addToCart(item)}>
