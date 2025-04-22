@@ -7,7 +7,7 @@ const ProductCard = ({
   desc,
   price,
   image,
-  quantity,
+  quantity, // quantity still not used
   stock,
   addToCart,
 }) => {
