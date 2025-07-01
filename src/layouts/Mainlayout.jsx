@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 
 const MainLayout = ({ cart, isDarkMode }) => {
@@ -8,6 +9,7 @@ const MainLayout = ({ cart, isDarkMode }) => {
       <main>
         <Outlet />
       </main>
+      <Footer />
     </>
   );
 };
