@@ -18,7 +18,6 @@ const Footer = () => {
             into style with Zayrah.
           </p>
         </div>
-
         {/* Navigation Links */}
         <div>
           <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
@@ -40,13 +39,40 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
-        {/*  */}
-      </div>
-
-      {/* Bottom line */}
-      <div className="border-t border-base-300 mt-10 pt-5 text-center text-sm">
-        © {new Date().getFullYear()} Zayrah.life. All rights reserved.
+        {/* Contact & Socials */}
+        <div>
+          <h4 className="text-lg font-semibold mb-2">Connect With Us</h4>
+          <div className="flex space-x-4 text-xl mb-3">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-primary"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-primary"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-primary"
+            >
+              <FaTwitter />
+            </a>
+            <a href="mailto:support@zayrah.life" className="hover:text-primary">
+              <FaEnvelope />
+            </a>
+          </div>
+          <p className="text-sm">support@zayrah.life</p>
+        </div>
       </div>
     </footer>
   );
