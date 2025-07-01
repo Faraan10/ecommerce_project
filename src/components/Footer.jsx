@@ -68,6 +68,35 @@ const Footer = () => {
         </div>
 
         {/* Social Media */}
+        <div>
+          <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
+          <div className="flex gap-4 text-base-content">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-blue-500 transition"
+            >
+              <Facebook size={20} />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-pink-500 transition"
+            >
+              <Instagram size={20} />
+            </a>
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-sky-400 transition"
+            >
+              <Twitter size={20} />
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Copyright */}
