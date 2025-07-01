@@ -74,6 +74,11 @@ const Footer = () => {
           <p className="text-sm">support@zayrah.life</p>
         </div>
       </div>
+
+      {/* Bottom line */}
+      <div className="border-t border-base-300 mt-10 pt-5 text-center text-sm">
+        © {new Date().getFullYear()} Zayrah.life. All rights reserved.
+      </div>
     </footer>
   );
 };
