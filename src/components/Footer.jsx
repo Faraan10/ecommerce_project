@@ -1,82 +1,77 @@
 import { Link } from "react-router-dom";
 import {
-  FaFacebookF,
-  FaInstagram,
-  FaTwitter,
-  FaEnvelope,
-} from "react-icons/fa";
+  Facebook,
+  Instagram,
+  Twitter,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-base-200 text-base-content px-5 md:px-20 py-10">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-base-300 text-base-content border-t border-base-200 px-5 md:px-20 py-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand Info */}
         <div>
           <h3 className="text-2xl font-bold text-primary mb-2">Zayrah.life</h3>
           <p className="text-sm leading-relaxed">
-            Premium sneakers & fashion curated for the modern lifestyle. Step
-            into style with Zayrah.
+            Redefining premium fashion. Footwear & essentials that keep you
+            ahead of the curve — stylish, comfortable, and built to last.
           </p>
         </div>
+
         {/* Navigation Links */}
         <div>
-          <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
+          <h4 className="text-lg font-semibold mb-3">Quick Links</h4>
           <ul className="space-y-2 text-sm">
             <li>
-              <Link to="/" className="hover:underline">
+              <Link to="/" className="hover:text-blue-500 transition">
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/products" className="hover:underline">
+              <Link to="/products" className="hover:text-blue-500 transition">
                 Products
               </Link>
             </li>
             <li>
-              <Link to="/about" className="hover:underline">
+              <Link to="/about" className="hover:text-blue-500 transition">
                 About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-blue-500 transition">
+                Contact
               </Link>
             </li>
           </ul>
         </div>
-        {/* Contact & Socials */}
+
+        {/* Contact Info */}
         <div>
-          <h4 className="text-lg font-semibold mb-2">Connect With Us</h4>
-          <div className="flex space-x-4 text-xl mb-3">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-primary"
-            >
-              <FaTwitter />
-            </a>
-            <a href="mailto:support@zayrah.life" className="hover:text-primary">
-              <FaEnvelope />
-            </a>
-          </div>
-          <p className="text-sm">support@zayrah.life</p>
+          <h4 className="text-lg font-semibold mb-3">Get in Touch</h4>
+          <ul className="space-y-2 text-sm">
+            <li className="flex items-center gap-2">
+              <Mail size={16} />
+              <a href="mailto:support@zayrah.life">support@zayrah.life</a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone size={16} />
+              <a href="tel:+911234567890">+91 12345 67890</a>
+            </li>
+            <li className="flex items-center gap-2">
+              <MapPin size={16} />
+              <span>Bangalore, India</span>
+            </li>
+          </ul>
         </div>
+
+        {/* Social Media */}
       </div>
 
-      {/* Bottom line */}
-      <div className="border-t border-base-300 mt-10 pt-5 text-center text-sm">
+      {/* Copyright */}
+      <div className="text-center text-xs mt-10 text-base-content/70">
         © {new Date().getFullYear()} Zayrah.life. All rights reserved.
       </div>
     </footer>
