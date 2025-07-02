@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Customer Support</h3>
-              <p className="text-base-content">Email: support@yourstore.com</p>
+              <p className="text-base-content">Email: support@zayrah.com</p>
               <p className="text-base-content">Phone: +1 (555) 123-4567</p>
             </div>
             <div>
