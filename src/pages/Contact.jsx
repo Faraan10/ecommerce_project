@@ -1,5 +1,3 @@
-import React from "react";
-
 const Contact = () => {
   return (
     <div className="min-h-screen bg-base-100 text-base-content py-10 px-5 md:px-20">
