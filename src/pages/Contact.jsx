@@ -6,7 +6,7 @@ const Contact = () => {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
         <p className="text-base-content mb-10 text-center">
-          Have questions, feedback, or need help? Fill out the form below and
+          Have questions, feedback or need help? Fill out the form below and
           we'll get back to you shortly.
         </p>
 
